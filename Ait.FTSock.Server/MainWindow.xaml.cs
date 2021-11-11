@@ -74,7 +74,7 @@ namespace Ait.FTSock.Server
             {
                 cmbPorts.SelectedItem = 49200;
             }
-            btnStopServer.Visibility = Visibility.Hidden;
+            
         }
         private void SaveConfig()
         {
