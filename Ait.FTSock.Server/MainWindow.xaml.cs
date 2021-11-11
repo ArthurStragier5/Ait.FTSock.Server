@@ -24,5 +24,26 @@ namespace Ait.FTSock.Server
         {
             InitializeComponent();
         }
+        private void CmbIPs_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
+        private void CmbPorts_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+          
+        }
+
+        private void BtnStartServer_Click(object sender, RoutedEventArgs e)
+        {
+            
+
+        }
+
+        private void BtnStopServer_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+
     }
 }
