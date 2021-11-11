@@ -24,9 +24,8 @@ namespace Ait.FTSock.Server
     /// </summary>
     public partial class MainWindow : Window
     {
-        IPEndPoint serverEndpoint;
-        Socket serverSocket;
-        bool serverOnline = false;
+        
+      
         public MainWindow()
         {
             InitializeComponent();
@@ -44,77 +43,13 @@ namespace Ait.FTSock.Server
             SaveConfig();
         }
 
-        private void BtnStartServer_Click(object sender, RoutedEventArgs e)
-        {
-            
-
-        }
+     
 
         private void BtnStopServer_Click(object sender, RoutedEventArgs e)
         {
             
         }
-        private void StartListening()
-        {
-            IPAddress ip = IPAddress.Parse(cmbIPs.SelectedItem.ToString());
-            int port = int.Parse(cmbPorts.SelectedItem.ToString());
-            serverEndpoint = new IPEndPoint(ip, port);
-            serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-
-            //try
-            //{
-            //    serverSocket.Bind(serverEndpoint);
-            //    serverSocket.Listen(int.MaxValue);
-            //    while (serverOnline)
-            //    {
-            //        DoEvents();
-            //        if (serverSocket != null)
-            //        {
-            //            if (serverSocket.Poll(200000, SelectMode.SelectRead))
-            //            {
-            //                HandleClientCall(serverSocket.Accept());
-            //            }
-            //        }
-            //    }
-            //}
-            //catch (Exception error)
-            //{
-            //    MessageBox.Show(error.Message, "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
-            //}
-        }
-        //private void HandleClientCall(Socket clientCall)
-        //{
-        //    byte[] clientRequest = new Byte[1024];
-        //    string instruction = null;
-
-        //    while (true)
-        //    {
-        //        int numByte = clientCall.Receive(clientRequest);
-        //        instruction += Encoding.ASCII.GetString(clientRequest, 0, numByte);
-        //        if (instruction.IndexOf("##EOM") > -1)
-        //            break;
-        //    }
-        //    string serverResponseInText = ProcessClientCall(instruction);
-        //    if (serverResponseInText != "")
-        //    {
-        //        byte[] serverResponse = Encoding.ASCII.GetBytes(serverResponseInText);
-        //        clientCall.Send(serverResponse);
-        //    }
-        //    clientCall.Shutdown(SocketShutdown.Both);
-        //    clientCall.Close();
-        //}
         
-        //private static void DoEvents()
-        //{
-        //    try
-        //    {
-        //        System.Windows.Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(delegate { }));
-        //    }
-        //    catch (Exception fout)
-        //    {
-        //        System.Windows.Application.Current.Dispatcher.DisableProcessing();
-        //    }
-        //}
         private void StartupConfig()
         {
             cmbIPs.ItemsSource = IPv4Helper.GetActiveIP4s();
@@ -139,7 +74,6 @@ namespace Ait.FTSock.Server
             {
                 cmbPorts.SelectedItem = 49200;
             }
-            btnStartServer.Visibility = Visibility.Visible;
             btnStopServer.Visibility = Visibility.Hidden;
         }
         private void SaveConfig()
@@ -152,6 +86,9 @@ namespace Ait.FTSock.Server
             AppConfig.WriteConfig(ip, port);
         }
 
-        
+        private void txtBasePath_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
