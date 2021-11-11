@@ -90,5 +90,10 @@ namespace Ait.FTSock.Server
         {
 
         }
+
+        private void btnPath_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
