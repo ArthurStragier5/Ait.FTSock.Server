@@ -6,4 +6,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Ait.FTSock.Server.Core\Ait.FTSock.Server.Core.csproj" />
+  </ItemGroup>
+
 </Project>
