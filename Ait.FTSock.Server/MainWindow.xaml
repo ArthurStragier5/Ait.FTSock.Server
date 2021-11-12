@@ -14,10 +14,10 @@
                 <Label Content="IP : " FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Height="28" Margin="10,10,0,0" VerticalAlignment="Top" Width="31"/>
                 <Label Content="Port : " FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Height="28" Margin="210,7,0,0" VerticalAlignment="Top" Width="57"/>
                 <ComboBox x:Name="cmbPorts" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="267,9,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="CmbPorts_SelectionChanged"/>
-                <Button x:Name="btnStopServer" Content="STOP" Background="Tomato" Foreground="White" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="41,35,0,0" VerticalAlignment="Top" Height="34" Width="63" Click="BtnStopServer_Click"/>
+                <Button x:Name="btnStopServer" Content="STOP" Background="Tomato" Foreground="White" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="46,52,0,0" VerticalAlignment="Top" Height="22" Width="63" Click="BtnStopServer_Click"/>
                 <Label x:Name="lblPath" Content="Base path:" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Height="28" Margin="406,10,0,0" VerticalAlignment="Top" Width="78"/>
-                <TextBox x:Name="txtBasePath" HorizontalAlignment="Left" Margin="489,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" TextChanged="txtBasePath_TextChanged"/>
-                <Button x:Name="btnPath" Content="..." HorizontalAlignment="Left" Margin="676,15,0,0" VerticalAlignment="Top" Width="32" Click="btnPath_Click"/>
+                <TextBox x:Name="txtBasePath" HorizontalAlignment="Left" Margin="489,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="171" TextChanged="txtBasePath_TextChanged" Height="60"/>
+                <Button x:Name="btnPath" Content="..." HorizontalAlignment="Left" Margin="676,10,0,0" VerticalAlignment="Top" Width="41" Click="btnPath_Click" Height="25"/>
             </Grid>
         </GroupBox>
         <GroupBox Header="Communications

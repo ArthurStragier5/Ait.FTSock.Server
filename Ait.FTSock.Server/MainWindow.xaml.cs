@@ -49,7 +49,8 @@ namespace Ait.FTSock.Server
 
         private void BtnStopServer_Click(object sender, RoutedEventArgs e)
         {
-            
+            btnPath.Visibility = Visibility.Visible;
+            txtBasePath.Text = "";
         }
         
         private void StartupConfig()
@@ -101,6 +102,8 @@ namespace Ait.FTSock.Server
             {
                 txtBasePath.Text = dialog.FileName;
             }
+            btnPath.Visibility = Visibility.Hidden;
+            
 
         }
     }
