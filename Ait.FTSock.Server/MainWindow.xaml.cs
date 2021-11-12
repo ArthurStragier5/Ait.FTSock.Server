@@ -51,6 +51,8 @@ namespace Ait.FTSock.Server
         {
             btnPath.Visibility = Visibility.Visible;
             txtBasePath.Text = "";
+            txtBasePath.IsEnabled = true;
+            
         }
         
         private void StartupConfig()
@@ -102,9 +104,8 @@ namespace Ait.FTSock.Server
             {
                 txtBasePath.Text = dialog.FileName;
             }
+            txtBasePath.IsEnabled = false;
             btnPath.Visibility = Visibility.Hidden;
-            
-
         }
     }
 }
