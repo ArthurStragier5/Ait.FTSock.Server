@@ -20,7 +20,8 @@
                 <Button x:Name="btnPath" Content="..." HorizontalAlignment="Left" Margin="676,15,0,0" VerticalAlignment="Top" Width="32" Click="btnPath_Click"/>
             </Grid>
         </GroupBox>
-        <GroupBox Header="Locations" HorizontalAlignment="Center" Height="314" Margin="0,100,0,0" VerticalAlignment="Top" Width="784"  >
+        <GroupBox Header="Communications
+                  " HorizontalAlignment="Center" Height="314" Margin="0,100,0,0" VerticalAlignment="Top" Width="784"  >
             <DataGrid x:Name="grdLocations"/>
         </GroupBox>
 
