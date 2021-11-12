@@ -1,5 +1,6 @@
 ﻿using Ait.FTSock.Server.Core.Helpers;
 using Microsoft.Win32;
+using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -94,21 +95,11 @@ namespace Ait.FTSock.Server
 
         private void btnPath_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog fileDialog = new OpenFileDialog();
-            fileDialog.Multiselect = true;
-            fileDialog.Filter = "Log Files|*.log|Textfiles|*.txt|All Files|*.*";
-            fileDialog.DefaultExt = ".log";
-            Nullable<bool> dialogOK = fileDialog.ShowDialog();
-
-            if (dialogOK == true)
+            CommonOpenFileDialog dialog = new CommonOpenFileDialog();
+            dialog.IsFolderPicker = true;
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
             {
-                string sFilenames = "";
-                foreach(string  sFilename in fileDialog.FileNames)
-                {
-                    sFilenames += ";" + sFilename;
-                }
-                sFilenames = sFilenames.Substring(1);
-                txtBasePath.Text = sFilenames;
+                txtBasePath.Text = dialog.FileName;
             }
 
         }
